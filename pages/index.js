@@ -6,13 +6,7 @@ import { getAllGoalsForHome } from '../lib/api'
 import Head from 'next/head'
 
 export default function Index(props) {
-  console.log('props')
-  console.log(props)
   const { goals } = props;
-  console.log('goals') 
-  console.log(goals)
- 
-
   return (
     <>
       <Layout>
