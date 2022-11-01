@@ -1,0 +1,487 @@
+[
+  {
+    "ts": "2022-10-30T18:04:00.969Z",
+    "level": "error",
+    "error": {
+      "name": "VersionMismatch",
+      "entity": {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "r30dv94nkyaa"
+            }
+          },
+          "id": "post",
+          "type": "ContentType",
+          "createdAt": "2022-10-30T16:34:54.500Z",
+          "updatedAt": "2022-10-30T18:03:02.152Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 3,
+          "publishedAt": "2022-10-30T17:20:30.658Z",
+          "firstPublishedAt": "2022-10-30T16:35:32.332Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "78z83JuKyaAADGRdRUmjXJ"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "78z83JuKyaAADGRdRUmjXJ"
+            }
+          },
+          "publishedCounter": 2,
+          "version": 5,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "78z83JuKyaAADGRdRUmjXJ"
+            }
+          }
+        },
+        "displayField": "title",
+        "name": "Post",
+        "description": "",
+        "fields": [
+          {
+            "id": "title",
+            "name": "Title",
+            "type": "Symbol",
+            "localized": false,
+            "required": true,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "slug",
+            "name": "Slug",
+            "type": "Symbol",
+            "localized": false,
+            "required": true,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "content",
+            "name": "Content",
+            "type": "RichText",
+            "localized": false,
+            "required": true,
+            "validations": [
+              {
+                "enabledMarks": [
+                  "bold",
+                  "italic",
+                  "underline",
+                  "code"
+                ],
+                "message": "Only bold, italic, underline, and code marks are allowed"
+              },
+              {
+                "enabledNodeTypes": [
+                  "heading-1",
+                  "heading-2",
+                  "heading-3",
+                  "heading-4",
+                  "heading-5",
+                  "heading-6",
+                  "ordered-list",
+                  "unordered-list",
+                  "hr",
+                  "blockquote",
+                  "embedded-entry-block",
+                  "embedded-asset-block",
+                  "hyperlink",
+                  "entry-hyperlink",
+                  "asset-hyperlink",
+                  "embedded-entry-inline"
+                ],
+                "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
+              },
+              {
+                "nodes": {
+                  "asset-hyperlink": [
+                    {
+                      "size": {
+                        "max": 10
+                      },
+                      "message": null
+                    }
+                  ],
+                  "embedded-asset-block": [
+                    {
+                      "size": {
+                        "max": 10
+                      },
+                      "message": null
+                    }
+                  ],
+                  "embedded-entry-block": [
+                    {
+                      "size": {
+                        "max": 10
+                      },
+                      "message": null
+                    }
+                  ],
+                  "embedded-entry-inline": [
+                    {
+                      "size": {
+                        "max": 10
+                      },
+                      "message": null
+                    }
+                  ],
+                  "entry-hyperlink": [
+                    {
+                      "size": {
+                        "max": 10
+                      },
+                      "message": null
+                    }
+                  ]
+                }
+              }
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "excerpt",
+            "name": "Excerpt",
+            "type": "Symbol",
+            "localized": false,
+            "required": true,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "coverImage",
+            "name": "Cover Image",
+            "type": "Link",
+            "localized": false,
+            "required": true,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false,
+            "linkType": "Asset"
+          },
+          {
+            "id": "date",
+            "name": "Date",
+            "type": "Date",
+            "localized": false,
+            "required": true,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "author",
+            "name": "Author",
+            "type": "Link",
+            "localized": false,
+            "required": true,
+            "validations": [
+              {
+                "linkContentType": [
+                  "author"
+                ]
+              }
+            ],
+            "disabled": false,
+            "omitted": false,
+            "linkType": "Entry"
+          }
+        ]
+      },
+      "data": {
+        "status": 409,
+        "statusText": "Conflict",
+        "message": "",
+        "details": {
+        },
+        "request": {
+          "url": "/spaces/r30dv94nkyaa/environments/master/content_types/post/published",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.import/7.9.42; feature library-import; sdk contentful-management.js/7.54.2; platform node.js/v18.9.1; os macOS/v18.9.1;",
+            "Authorization": "Bearer ...CnzdI",
+            "user-agent": "node.js/v18.9.1",
+            "Accept-Encoding": "gzip",
+            "X-Contentful-Version": 5
+          },
+          "method": "put",
+          "payloadData": null
+        },
+        "requestId": "7dfce1b0-e7c3-4432-9d82-ce1b8c607f00"
+      }
+    }
+  },
+  {
+    "ts": "2022-10-30T18:04:01.493Z",
+    "level": "error",
+    "error": {
+      "name": "VersionMismatch",
+      "entity": {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "r30dv94nkyaa"
+            }
+          },
+          "id": "post",
+          "type": "ContentType",
+          "createdAt": "2022-10-30T16:34:54.500Z",
+          "updatedAt": "2022-10-30T18:03:02.152Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 3,
+          "publishedAt": "2022-10-30T17:20:30.658Z",
+          "firstPublishedAt": "2022-10-30T16:35:32.332Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "78z83JuKyaAADGRdRUmjXJ"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "78z83JuKyaAADGRdRUmjXJ"
+            }
+          },
+          "publishedCounter": 2,
+          "version": 5,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "78z83JuKyaAADGRdRUmjXJ"
+            }
+          }
+        },
+        "displayField": "title",
+        "name": "Post",
+        "description": "",
+        "fields": [
+          {
+            "id": "title",
+            "name": "Title",
+            "type": "Symbol",
+            "localized": false,
+            "required": true,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "slug",
+            "name": "Slug",
+            "type": "Symbol",
+            "localized": false,
+            "required": true,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "content",
+            "name": "Content",
+            "type": "RichText",
+            "localized": false,
+            "required": true,
+            "validations": [
+              {
+                "enabledMarks": [
+                  "bold",
+                  "italic",
+                  "underline",
+                  "code"
+                ],
+                "message": "Only bold, italic, underline, and code marks are allowed"
+              },
+              {
+                "enabledNodeTypes": [
+                  "heading-1",
+                  "heading-2",
+                  "heading-3",
+                  "heading-4",
+                  "heading-5",
+                  "heading-6",
+                  "ordered-list",
+                  "unordered-list",
+                  "hr",
+                  "blockquote",
+                  "embedded-entry-block",
+                  "embedded-asset-block",
+                  "hyperlink",
+                  "entry-hyperlink",
+                  "asset-hyperlink",
+                  "embedded-entry-inline"
+                ],
+                "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
+              },
+              {
+                "nodes": {
+                  "asset-hyperlink": [
+                    {
+                      "size": {
+                        "max": 10
+                      },
+                      "message": null
+                    }
+                  ],
+                  "embedded-asset-block": [
+                    {
+                      "size": {
+                        "max": 10
+                      },
+                      "message": null
+                    }
+                  ],
+                  "embedded-entry-block": [
+                    {
+                      "size": {
+                        "max": 10
+                      },
+                      "message": null
+                    }
+                  ],
+                  "embedded-entry-inline": [
+                    {
+                      "size": {
+                        "max": 10
+                      },
+                      "message": null
+                    }
+                  ],
+                  "entry-hyperlink": [
+                    {
+                      "size": {
+                        "max": 10
+                      },
+                      "message": null
+                    }
+                  ]
+                }
+              }
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "excerpt",
+            "name": "Excerpt",
+            "type": "Symbol",
+            "localized": false,
+            "required": true,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "coverImage",
+            "name": "Cover Image",
+            "type": "Link",
+            "localized": false,
+            "required": true,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false,
+            "linkType": "Asset"
+          },
+          {
+            "id": "date",
+            "name": "Date",
+            "type": "Date",
+            "localized": false,
+            "required": true,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "author",
+            "name": "Author",
+            "type": "Link",
+            "localized": false,
+            "required": true,
+            "validations": [
+              {
+                "linkContentType": [
+                  "author"
+                ]
+              }
+            ],
+            "disabled": false,
+            "omitted": false,
+            "linkType": "Entry"
+          }
+        ]
+      },
+      "data": {
+        "status": 409,
+        "statusText": "Conflict",
+        "message": "",
+        "details": {
+        },
+        "request": {
+          "url": "/spaces/r30dv94nkyaa/environments/master/content_types/post/published",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.import/7.9.42; feature library-import; sdk contentful-management.js/7.54.2; platform node.js/v18.9.1; os macOS/v18.9.1;",
+            "Authorization": "Bearer ...CnzdI",
+            "user-agent": "node.js/v18.9.1",
+            "Accept-Encoding": "gzip",
+            "X-Contentful-Version": 5
+          },
+          "method": "put",
+          "payloadData": null
+        },
+        "requestId": "573ff3a9-a317-4a0e-9926-af143d2aac32"
+      }
+    }
+  },
+  {
+    "ts": "2022-10-30T18:04:01.493Z",
+    "level": "error",
+    "error": "Could not publish the following entities: Post (post)"
+  }
+]
