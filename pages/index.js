@@ -32,7 +32,7 @@ export default function Index(props) {
 
 export async function getStaticProps() {
   const data = await getAllGoalsForHome()
-  const goals = data.data.goalCollection.items;
+  const goals = data?.data?.goalCollection?.items || [];
   return {
     props: { goals },
   }
